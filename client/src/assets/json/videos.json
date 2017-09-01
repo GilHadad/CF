@@ -1,0 +1,24 @@
+[
+    {
+      "name": "item1",
+      "slug": "item-1",
+      "embed": "6wD4V0rvlDI",
+      "imageSrc": "/assets/images/1.png",
+      "hide": false
+    },
+    {
+      "name": "item2",
+      "slug": "item-2",
+      "embed": "6wD4V0rvlDI",
+      "imageSrc": "/assets/images/2.png",
+      "hide": false
+    },
+    {
+      "name": "item3",
+      "slug": "item-3",
+      "embed": null,
+      "imageSrc": "/assets/images/3.png",
+      "hide": false
+    }
+
+  ]

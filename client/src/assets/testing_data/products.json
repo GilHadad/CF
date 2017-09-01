@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "title": "I am my own boss",
+      "description": "If you need to manage only yourself, use this service.",
+      "employees": "1",
+
+      "slug": "i-am-my-own-boss",
+      "imageSrc": "assets/testing_data/images/product_1.jpg",
+      "width_field": "",
+      "height_field": "",
+      "button_text": "lets get started",
+      
+      "hide": false
+    },
+
+    {
+      "id":2,
+      "title": "Dream team",
+      "description": "this product is good to manage projects of on team.",
+      "employees": "2-15",
+      
+      "slug": "dream-team",
+
+      "imageSrc": "assets/testing_data/images/product_2.jpg",
+      "width_field": "",
+      "height_field": "",
+      "button_text": "lets get started",
+
+      "hide": false
+    },
+
+    {
+      "id": 3,
+      "title": "One big happy family",
+      "description": "Here you can manage severl teams that work on big projects and eatch team has part in the one big project",
+      "employees": "16+",
+      
+      "slug": "one-big-happy-family",
+
+      "imageSrc": "assets/testing_data/images/product_3.jpg",
+      "width_field": "",
+      "height_field": "",
+      "button_text": "lets get started",
+
+      "hide": false
+    }
+  ]

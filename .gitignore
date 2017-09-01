@@ -1,0 +1,8 @@
+node_modules
+static_in_env
+tcl
+Scripts
+Lib
+Include
+db.sqlite3
+__pycache__/

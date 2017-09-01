@@ -1,0 +1,19 @@
+<div class="row text-center">
+  <h1>{{titel}}</h1>
+</div>
+
+<div class="row">
+  <div *ngFor='let item of ProductList'>
+    <div class="col-md-4 text-center">
+   
+        <img src="{{item.imageSrc}}" alt="" class="img-circle img-thumbnail" width="200" height="200">
+        <div class="caption">
+          <h3>{{item.title}}</h3>
+          <p>{{item.description}}</p>
+          <p><a routerLink='/getting-started/{{ item.slug }}' routerLinkActive='active' class="btn btn-primary" role="button">{{item.button_text}}</a>
+        </div>
+    
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<section class="login-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 login-sec">
+        <h2 class="text-center">Login Now</h2>
+        <form class="login-form">
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="text-uppercase">Username or email</label>
+            <input 
+              id="user_name"
+              type="text"
+              class="form-control"
+              required
+              placeholder="Enter username"
+              [(ngModel)]="userData.username"
+              name="username"
+            >
+
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+            <input 
+              id="user_password" 
+              required type="password" class="form-control"
+              placeholder="Enter your password"
+              [(ngModel)]="userData.password"
+              name="passowrd"
+              >
+          </div>
+
+
+          <div class="form-check">
+            <!--<label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      <small>Remember Me</small>
+    </label>-->
+            <button (click)="onSubmit()" id="login" type="button" class="btn btn-login float-right">Submit</button>
+          </div>
+
+
+
+        </form>
+        <!--<div class="copy-text">Created with <i class="fa fa-heart"></i> Love by <a href="http://grafreez.com">Grafreez.com</a></div>-->
+      </div>
+      <div class="col-md-8 banner-sec">
+        <div class="banner-text">
+          <h2>This is Heaven</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  $(function () {
+    $('#login').click(function (e) {
+      e.preventDefault();
+      // var name = $('#user_name').val();
+      // var password = $("#user_password").val();
+      $.ajax({
+        type: 'POST',
+        url
+      })
+
+
+    }
+
+
+    )
+  }
+
+  )
+
+</script>

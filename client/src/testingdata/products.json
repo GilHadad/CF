@@ -1,0 +1,31 @@
+[
+    {
+      "name": "I am my own boss",
+      "description": "",
+      "employees": "1",
+
+      "slug": "product1",
+      "imageSrc": "",
+      "hide": false
+    },
+
+    {
+      "name": "Dream team",
+      "description": "",
+      "employees": "2-15",
+      
+      "slug": "product2",
+      "imageSrc": "",
+      "hide": false
+    },
+
+    {
+      "name": "One big happy family",
+      "description": "",
+      "employees": "16+",
+      
+      "slug": "product3",
+      "imageSrc": "",
+      "hide": false
+    }
+  ]
