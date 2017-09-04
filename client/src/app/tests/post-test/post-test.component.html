@@ -1,5 +1,29 @@
-<button (click)="onTestGet()"> test get </button>
+<div class='container'>
+
+<br/>
+
+
+ <button (click)="onTestGet()"> test get </button>
 <p>output: {{getData}}</p>
 
 <button (click)="onTestPost()"> test get </button>
 <p>output: {{postData}}</p>
+
+
+
+
+
+<div class="ui raised segment">
+  <h2 class="ui header">Demo Form: Sku</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form">
+    <div class="field">
+      <label for="skuInput">SKU</label>
+      <input type="text" id="skuInput" placeholder="SKU" [formControl]="myForm.controls['sku']">
+      <button type="submit" class="ui button">Submit</button>
+    </div>
+    
+  </form>
+</div>
+
+
+</div>

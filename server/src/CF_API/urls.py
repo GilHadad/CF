@@ -36,12 +36,13 @@ urlpatterns = [
     url(r'^api-base/products$', ProductListView.as_view(), name='get_get_products'),
 
     # API Accounts
+    url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^api-accounts/', include("accounts.urls", namespace='accounts-api')),
 
     # JWT
-    url(r'^api-auth-token/', obtain_jwt_token),
-    url(r'^api-token-refresh/', refresh_jwt_token),
-    url(r'^api-token-verify/', verify_jwt_token),
+    # url(r'^api-auth-token/', obtain_jwt_token),
+    # url(r'^api-token-refresh/', refresh_jwt_token),
+    # url(r'^api-token-verify/', verify_jwt_token),
 
     # API ProjectManagement
     #url(r'^api/ProjectManagement/ProjectList$', ProjectListView.as_view(), name='get-ProjectList'),

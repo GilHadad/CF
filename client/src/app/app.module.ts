@@ -1,18 +1,15 @@
-import { BrowserModule }    from '@angular/platform-browser';
-import { NgModule }         from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { HttpModule }   from "@angular/http";
-import { FormsModule }  from '@angular/forms';
-import { AlertModule }  from "ngx-bootstrap";
+import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
-
-
+import { AppRoutingModule } from './app.routing';
 
 import { ProductsListComponent } from './products/products-list/products-list.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
-
-import { AppRoutingModule } from './app.routing';
 
 import { HeaderNavbarComponent } from './base/header-navbar/header-navbar.component';
 import { HomeComponent } from './base/home/home.component';
@@ -43,6 +40,8 @@ import { PostTestComponent } from './tests/post-test/post-test.component';
     AppRoutingModule,
     HttpModule,
     FormsModule,
+    ReactiveFormsModule,
+
     BrowserModule,
     AlertModule.forRoot(),
 
