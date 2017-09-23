@@ -6,3 +6,5 @@ Lib
 Include
 db.sqlite3
 __pycache__/
+client/dist/
+**/migrations/*auto*.py

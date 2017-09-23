@@ -21,7 +21,7 @@ from rest_framework.permissions import (
 class ProductListView(ListAPIView):
   queryset = Product.objects.all()
   serializer_class = ProductSerializer
-  permission_classes = [AllowAny]
+  permission_classes = [IsAuthenticated]
 
 
 
