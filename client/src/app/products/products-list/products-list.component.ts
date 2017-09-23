@@ -10,7 +10,7 @@ import { ProducService } from '../products-service/products.service';
 })
 export class ProductsListComponent implements OnInit, OnDestroy {
   private req: any;
-  ProductList: [any];
+  ProductList: any[];
   titel = 'Getting started:';
   todayDate;
 
@@ -19,7 +19,7 @@ export class ProductsListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.todayDate = new Date()
 
-    this.req = this._products.list().subscribe(data => {
+    this.req = this._products.list().subscribe((data) => {
       this.ProductList = data
       console.log(data)
     })
