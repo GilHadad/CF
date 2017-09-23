@@ -16,14 +16,9 @@ import { PostTestComponent } from './tests/post-test/post-test.component';
 const appRoutes: Routes = [
   {
     path: '',
-<<<<<<< HEAD
-    component: HomeComponent
-=======
     redirectTo: 'home',
     pathMatch: 'full',
   },
->>>>>>> 2c52a218d0bfaf1596141840b9a543933027bff6
-
   {
     path: 'home',
     component: HomeComponent,
@@ -37,14 +32,8 @@ const appRoutes: Routes = [
   },
 
   {
-<<<<<<< HEAD
-    path: 'subscriber-login',
-    component: SubscriberLoginComponent
-
-=======
     path: 'login',
     component: SubscriberLoginComponent
->>>>>>> 2c52a218d0bfaf1596141840b9a543933027bff6
   },
 
   {
