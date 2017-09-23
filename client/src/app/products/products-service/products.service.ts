@@ -1,48 +1,47 @@
-import { Injectable } from '@angular/core';
-import { Http }       from "@angular/http";
+import {APP_CONFIG, AppConfig} from '../../app.conf';
+import {Observable} from 'rxjs/Rx';
+import {Inject, Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-const endpoint = 'http://127.0.0.1:8000/api-base/products'
-
-
+const endpoint = '/api-base/products'
 
 
 @Injectable()
 export class ProducService {
-
-  constructor(private http: Http) { }
-
-  list(){
-    return this.http.get(endpoint)
-
-    .map(response=>response.json())
-    .catch(this.handleError)
+  private url: string;
+  constructor(private http: HttpClient, @Inject(APP_CONFIG) private appConfig: AppConfig) {
+    this.url = appConfig.baseUrl + endpoint;
   }
 
-  get(slug){
-    return this.http.get(endpoint)
-    .map(response=>{
-      let data = response.json().filter(item=>{
-        if(item.slug == slug){
-          return item
+  list() {
+    return this.http.get<any[]>(this.url)
+      .catch(this.handleError);
+  }
+
+  get(slug) {
+    return this.http.get<any[]>(this.url)
+      .map(response => {
+        const data = response.filter(item => {
+          if (item.slug === slug) {
+            return item
+          }
+        })
+        if (data.length === 1) {
+          return data[0]
         }
+        return {}
       })
-    if(data.length == 1){
-      return data[0]
-    }
-    return {}
-    })
-   .catch(this.handleError)
-  
+      .catch(this.handleError)
+
   }
 
-  private handleError(error:any, caught:any):any {
+  private handleError(error: any, caught: any) {
     console.log(error, caught)
+    return Observable.of([]);
   }
-
-
 
 
 }
